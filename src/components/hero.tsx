@@ -37,7 +37,7 @@ const Hero = () => {
                     </div>
                     <div className='hidden xl:flex relative'>
                         <div className='bg-hero_shape_light dark:bg-hero_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2'>
-                            <DevImg containerStyles='bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom' imgSrc='/hero/marcelHudy.png' />
+                            <DevImg containerStyles='bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom' imgSrc='' />
                         </div>
                     </div>
                 </div>
