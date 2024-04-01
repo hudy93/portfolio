@@ -142,7 +142,7 @@ const About = () => {
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">Personal Info</h3>
                     <p className="subtitle max-w-xl max-auto xl:mx-0">
-                      asdfja aksfdjaskjdvsdfj asdfjaskdf{" "}
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {
@@ -158,9 +158,9 @@ const About = () => {
                       })}
                     </div>
                     <div className="flex flex-cols gap-y-2">
-                      <div className="text-primary">Language Skills</div>
+                      <div className="text-primary">Language Skills: </div>
                       <div className="border-b border-border"></div>
-                      <div>English, German</div>
+                      <div> English, German</div>
                     </div>
                   </div>
                 </TabsContent>

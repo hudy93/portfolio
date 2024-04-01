@@ -24,7 +24,7 @@ const Hero = () => {
             </div>
             <h1 className="h1 mb-4"> Hello, my name is Marcel Hudy</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              Brief description with insights into myself
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
             <div className="flex flex-col gab-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="/contact">
