@@ -30,12 +30,19 @@ const ContactForm = () => {
   const onSubmit = async (data: ContactFormValues) => {
     setStatus("loading");
     try {
-      const response = await fetch("/api/contact", {
+      const formData = new FormData();
+      formData.append("access_key", "e53ab39a-9c57-45ef-8136-aa406fd4188f");
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("subject", data.subject);
+      formData.append("message", data.message);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: formData,
       });
-      if (!response.ok) throw new Error("Failed to send message");
+      const result = await response.json();
+      if (!result.success) throw new Error("Failed to send message");
       setStatus("success");
       form.reset();
     } catch {
