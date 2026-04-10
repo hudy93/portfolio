@@ -970,12 +970,12 @@ Add `aria-label` to social links and accessible icon names:
 ```tsx
 const icons: Icon[] = [
   {
-    path: "/", // TODO: Replace with real LinkedIn URL
+    path: "http://www.linkedin.com/in/marcelhudy", // TODO: Replace with real LinkedIn URL
     name: <RiLinkedinFill />,
     label: "LinkedIn",
   },
   {
-    path: "/", // TODO: Replace with real GitHub URL
+    path: "https://github.com/hudy93", // TODO: Replace with real GitHub URL
     name: <RiGithubFill />,
     label: "GitHub",
   },

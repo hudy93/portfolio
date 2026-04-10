@@ -17,6 +17,7 @@ import {
 } from "./ui/form";
 import { Send, ArrowLeftIcon, MailIcon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ContactForm = () => {
   const [status, setStatus] = useState<
@@ -67,6 +68,7 @@ const ContactForm = () => {
           </div>
           <div className="hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat"></div>
         </div>
+        <div className="grid xl:grid-cols-2 gap-12 items-start">
         <div className="max-w-[600px] mx-auto xl:mx-0">
           {status === "success" ? (
             <div className="text-center py-12">
@@ -175,6 +177,17 @@ const ContactForm = () => {
               </form>
             </Form>
           )}
+        </div>
+        <div className="hidden xl:flex justify-center items-start">
+          <Image
+            src="/hero/contact-hudy.png"
+            alt="Marcel Hudy"
+            width={400}
+            height={400}
+            className="rounded-[30px]"
+            priority
+          />
+        </div>
         </div>
       </div>
     </section>

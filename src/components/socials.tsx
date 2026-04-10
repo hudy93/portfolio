@@ -10,12 +10,12 @@ interface Icon {
 
 const icons: Icon[] = [
   {
-    path: "/", // TODO: Replace with real LinkedIn URL
+    path: "http://www.linkedin.com/in/marcelhudy",
     name: <RiLinkedinFill />,
     label: "LinkedIn",
   },
   {
-    path: "/", // TODO: Replace with real GitHub URL
+    path: "https://github.com/hudy93",
     name: <RiGithubFill />,
     label: "GitHub",
   },

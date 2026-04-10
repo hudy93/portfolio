@@ -6,10 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   User2,
   MailIcon,
-  HomeIcon,
-  PhoneCall,
   GraduationCap,
-  Calendar,
   Briefcase,
 } from "lucide-react";
 export interface QualificationData {
@@ -25,6 +22,7 @@ export interface DataObject {
   years?: string;
   company?: string;
   role?: string;
+  roles?: Array<{ role: string; years: string }>;
 }
 const infoData = [
   {
@@ -32,24 +30,12 @@ const infoData = [
     text: "Marcel Hudy",
   },
   {
-    icon: <PhoneCall size={20} />,
-    text: "+49 176 613 14 578",
-  },
-  {
     icon: <MailIcon size={20} />,
-    text: "hudymarcel@gmail.com",
-  },
-  {
-    icon: <Calendar size={20} />,
-    text: "Born 03.09.1993",
+    text: "info@hudy.tech",
   },
   {
     icon: <GraduationCap size={20} />,
     text: "B.Sc Computer Science",
-  },
-  {
-    icon: <HomeIcon size={20} />,
-    text: "Rumfordstr. 25, 80469 Munich",
   },
 ];
 
@@ -129,23 +115,21 @@ const qualificationData: Array<QualificationData> = [
     data: [
       {
         company: "Collaboration Factory GmbH",
-        role: "Team Lead Engineering",
-        years: "2026 - now",
-      },
-      {
-        company: "Collaboration Factory GmbH",
-        role: "Full Stack Engineer",
-        years: "2022 - 2026",
+        years: "2022 - now",
+        roles: [
+          { role: "Team Lead Engineering", years: "2026 - now" },
+          { role: "Full Stack Engineer", years: "2022 - 2026" },
+        ],
       },
       {
         company: "Bachner Elektro GmbH & Co. KG",
-        role: "Software Developer / Consultant",
         years: "2020 - 2022",
+        role: "Software Developer / Consultant",
       },
       {
         company: "BMW AG",
-        role: "Bachelor Student / IT-Specialist",
         years: "2018 - 2019",
+        role: "Bachelor Student / IT-Specialist",
       },
     ],
   },
@@ -211,9 +195,8 @@ const About = () => {
                         );
                       })}
                     </div>
-                    <div className="flex flex-cols gap-y-2">
+                    <div className="flex flex-col xl:flex-row items-center xl:items-start gap-y-2 gap-x-2">
                       <div className="text-primary">Language Skills: </div>
-                      <div className="border-b border-border"></div>
                       <div> English, German</div>
                     </div>
                   </div>
@@ -234,23 +217,33 @@ const About = () => {
                         <div>
                           {getData(qualificationData, "experience")!.data.map(
                             (item, index) => {
-                              const { company, role, years } = item;
+                              const { company, role, roles, years } = item;
                               return (
                                 <div key={index} className="flex gap-x-8 group">
-                                  <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                                  <div className="min-h-[84px] w-[1px] bg-border relative ml-2">
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                                   </div>
-                                  <div>
+                                  <div className="pb-6">
                                     <div className="font-semibold text-xl leading-none mb-2">
-                                      {" "}
                                       {company}
                                     </div>
-                                    <div className="text-lg leading none text-muted-foreground mb-4">
-                                      {role}
-                                    </div>
-                                    <div className="text-base font-medium">
+                                    <div className="text-base font-medium mb-2">
                                       {years}
                                     </div>
+                                    {roles ? (
+                                      <ul className="ml-4 space-y-1">
+                                        {roles.map((r, i) => (
+                                          <li key={i} className="text-muted-foreground">
+                                            <span className="text-base">{r.role}</span>
+                                            <span className="text-sm ml-2">({r.years})</span>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    ) : (
+                                      <div className="text-lg text-muted-foreground">
+                                        {role}
+                                      </div>
+                                    )}
                                   </div>
                                 </div>
                               );
@@ -322,7 +315,7 @@ const About = () => {
                         Tools
                       </h4>
                       <div className="border-b border-border mb-4"></div>
-                      <div className="flex gap-x-8 justify-center xl:justify-start">
+                      <div className="hidden xl:flex gap-x-8 justify-start flex-wrap">
                         {getData(skillData, "tools")?.data.map(
                           (item, index) => {
                             const { imgPath } = item;
@@ -340,6 +333,29 @@ const About = () => {
                               );
                           },
                         )}
+                      </div>
+                      <div className="xl:hidden overflow-hidden">
+                        <div className="flex gap-x-8 animate-scroll w-max">
+                          {[...Array(2)].flatMap((_, dupeIndex) =>
+                            getData(skillData, "tools")?.data.map(
+                              (item, index) => {
+                                const { imgPath } = item;
+                                if (imgPath != null)
+                                  return (
+                                    <div key={`${dupeIndex}-${index}`} className="flex-shrink-0">
+                                      <Image
+                                        src={imgPath}
+                                        width={48}
+                                        height={48}
+                                        alt=""
+                                        priority
+                                      />
+                                    </div>
+                                  );
+                              },
+                            ),
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
