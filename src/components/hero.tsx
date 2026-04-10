@@ -8,7 +8,7 @@ import Socials from "./socials";
 
 const Hero = () => {
   return (
-    <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
+    <section className="py-12 xl:py-24 min-h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
@@ -35,7 +35,7 @@ const Hero = () => {
               </a>
             </div>
             <Socials
-              containerStyles="flex gap-x-6 mx-auto xl:mx-0"
+              containerStyles="flex gap-x-6 mx-auto xl:mx-0 mb-8 xl:mb-0"
               iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
             />
           </div>
