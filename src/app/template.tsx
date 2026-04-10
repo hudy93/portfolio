@@ -8,7 +8,7 @@ interface TemplateProps {
 }
 
 const variants = {
-  hidde: { opacity: 0 },
+  hidden: { opacity: 0 },
   enter: { opacity: 1 },
 };
 

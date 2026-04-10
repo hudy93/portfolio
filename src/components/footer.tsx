@@ -1,14 +1,36 @@
 import Socials from "./socials";
+import Link from "next/link";
 
 const Footer = () => {
-  return (<footer className="bg-secondary py-12">
-    <div className="container mx-auto">
-      <div className="flex flex-col items-center justify-between">
-        <Socials containerStyles="flex gap-x-6 mx-auto xl:mx-0 mb-4" iconsStyles="text-primary text-[20px] dark:text-white/70 hover:text-white dark:hover:text-primary" />
-        <div className="text-muted-foreground">Copyright &copy; Marcel Hudy. All rights reserved.</div>
+  return (
+    <footer className="bg-secondary py-12">
+      <div className="container mx-auto">
+        <div className="flex flex-col items-center justify-between">
+          <Socials
+            containerStyles="flex gap-x-6 mx-auto xl:mx-0 mb-4"
+            iconsStyles="text-primary text-[20px] dark:text-white/70 hover:text-white dark:hover:text-primary"
+          />
+          <div className="flex gap-x-4 mb-4 text-sm">
+            <Link
+              href="/impressum"
+              className="text-muted-foreground hover:text-primary transition-all"
+            >
+              Impressum
+            </Link>
+            <Link
+              href="/datenschutz"
+              className="text-muted-foreground hover:text-primary transition-all"
+            >
+              Datenschutz
+            </Link>
+          </div>
+          <div className="text-muted-foreground">
+            Copyright &copy; Marcel Hudy. All rights reserved.
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>);
+    </footer>
+  );
 };
 
 export default Footer;

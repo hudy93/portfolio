@@ -7,7 +7,7 @@ import Socials from "./socials";
 const MobileNav = () => {
   return (
     <Sheet>
-      <SheetTrigger asChild>
+      <SheetTrigger asChild aria-label="Open menu">
         <AlignJustify className="cursor-pointer" />
       </SheetTrigger>
       <SheetContent>

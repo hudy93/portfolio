@@ -2,14 +2,8 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
 
-import {
-  RiBriefcase4Fill,
-  RiTeamFill,
-  RiTodoFill,
-  RiArrowDownSLine,
-} from "react-icons/ri";
+import { RiArrowDownSLine } from "react-icons/ri";
 
-import Badge from "./badge";
 import Socials from "./socials";
 import DevImg from "./devImg";
 
@@ -24,13 +18,12 @@ const Hero = () => {
             </div>
             <h1 className="h1 mb-4"> Hello, my name is Marcel Hudy</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet.
+              I build modern, scalable web applications and deliver
+              high-quality software solutions. With expertise in Angular,
+              TypeScript, and Java, I turn complex requirements into clean,
+              maintainable code.
             </p>
-            <div className="flex flex-col gab-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
+            <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="/contact">
                 <Button className="gap-x-2">
                   Contact Me <Send size={18} />
@@ -50,12 +43,13 @@ const Hero = () => {
               <DevImg
                 containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
                 imgSrc=""
+                alt="Marcel Hudy - Full Stack Engineer"
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="hidden md:flex absolute left-2/4 buttom-44 xl:bottom-12 animate bounce">
+      <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
         <RiArrowDownSLine className="text-3xl text-primary" />
       </div>
     </section>

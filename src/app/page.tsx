@@ -6,12 +6,12 @@ import Work from "@/components/work";
 
 export default function Home() {
   return (
-    <main>
+    <section>
       <Hero />
       <About />
       <Services />
       <Work />
       <Contact />
-    </main>
+    </section>
   );
 }

@@ -83,7 +83,7 @@ const skillData = [
 
 const qualificationData: Array<QualificationData> = [
   {
-    title: "eduction",
+    title: "education",
     data: [
       {
         university: "Hochschule Aalen",
@@ -119,6 +119,7 @@ const About = () => {
             <DevImg
               containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative"
               imgSrc=""
+              alt="Marcel Hudy"
             />
           </div>
           <div className="flex-1">
@@ -142,12 +143,11 @@ const About = () => {
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">Personal Info</h3>
                     <p className="subtitle max-w-xl max-auto xl:mx-0">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                      magna aliquyam erat, sed diam voluptua. At vero eos et
-                      accusam et justo duo dolores et ea rebum. Stet clita kasd
-                      gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                      sit amet.
+                      I&apos;m a Full Stack Engineer based in Munich, Germany,
+                      with a passion for building robust web applications. With
+                      a background in Computer Science and hands-on experience
+                      in software consulting, I bring both technical depth and
+                      practical problem-solving to every project.
                     </p>
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {
@@ -213,11 +213,11 @@ const About = () => {
                         <div className="flex gap-x-4 items-center text-[22px] text-primary">
                           <Briefcase />
                           <h4 className="capitalize font-medium">
-                            {getData(qualificationData, "eduction")?.title}
+                            {getData(qualificationData, "education")?.title}
                           </h4>
                         </div>
                         <div>
-                          {getData(qualificationData, "eduction")?.data.map(
+                          {getData(qualificationData, "education")?.data.map(
                             (item, index) => {
                               const { university, qualification, years } = item;
                               return (

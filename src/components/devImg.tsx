@@ -2,11 +2,12 @@ import Image from "next/image";
 interface DevImgProps {
   containerStyles: string;
   imgSrc: string;
+  alt?: string;
 }
-const DevImg: React.FC<DevImgProps> = ({ containerStyles, imgSrc }) => {
+const DevImg: React.FC<DevImgProps> = ({ containerStyles, imgSrc, alt = "" }) => {
   return (
     <div className={containerStyles}>
-      <Image src={imgSrc} fill priority alt="" />
+      {imgSrc && <Image src={imgSrc} fill priority alt={alt} />}
     </div>
   );
 };

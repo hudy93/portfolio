@@ -19,17 +19,17 @@ const serviceData: ServiceData[] = [
   {
     icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
     title: "Web Development",
-    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    desc: "Building responsive, performant web applications using modern frameworks like Angular, React, and Next.js. From single-page apps to complex enterprise platforms, I deliver clean and scalable frontend and backend solutions.",
   },
   {
     icon: <Blocks size={72} strokeWidth={0.8} />,
     title: "Testing",
-    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    desc: "Ensuring software quality through comprehensive testing strategies. I implement unit tests, integration tests, and end-to-end tests to catch bugs early and keep your codebase reliable and maintainable.",
   },
   {
     icon: <Gem size={72} strokeWidth={0.8} />,
     title: "App Development",
-    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    desc: "Developing cross-platform and native applications tailored to your business needs. From concept to deployment, I build intuitive, high-performance apps with a focus on great user experience.",
   },
 ];
 

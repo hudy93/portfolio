@@ -11,42 +11,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 import ProjectCard from "@/components/projectCard";
-
-import React from "react";
-export interface ProjectData {
-  image: string;
-  category: string;
-  name: string;
-  desc: string;
-  link: string;
-  github: string;
-}
-const projectData: Array<ProjectData> = [
-  {
-    image: "/work/1.png",
-    category: "react js",
-    name: "React Development",
-    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: "angular",
-    name: "Angular Development",
-    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/3.png",
-    category: "c#",
-    name: "C# App Development",
-    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut",
-    link: "/",
-    github: "/",
-  },
-];
+import { projectData } from "@/lib/project-data";
 
 const Work = () => {
   return (
@@ -55,8 +20,8 @@ const Work = () => {
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
           <h2 className="section-title mb-4">Latest Projects</h2>
           <p className="subtitle mb-8">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut
+            A selection of recent work showcasing web development, testing, and
+            app development projects.
           </p>
           <Link href="/projects">
             <Button>All projects</Button>
@@ -75,7 +40,7 @@ const Work = () => {
             modules={[Pagination]}
             pagination={{ clickable: true }}
           >
-            {projectData.slice(0.4).map((project, index) => {
+            {projectData.slice(0, 4).map((project, index) => {
               return (
                 <SwiperSlide key={index}>
                   <ProjectCard {...project} />
