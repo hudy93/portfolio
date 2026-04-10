@@ -33,7 +33,7 @@ const infoData = [
   },
   {
     icon: <PhoneCall size={20} />,
-    text: "017661314578",
+    text: "+49 176 613 14 578",
   },
   {
     icon: <MailIcon size={20} />,
@@ -41,15 +41,15 @@ const infoData = [
   },
   {
     icon: <Calendar size={20} />,
-    text: "03.09.1993",
+    text: "Born 03.09.1993",
   },
   {
     icon: <GraduationCap size={20} />,
-    text: "B.S Computer Science",
+    text: "B.Sc Computer Science",
   },
   {
     icon: <HomeIcon size={20} />,
-    text: "Görresstr. 48, 80797 München",
+    text: "Rumfordstr. 25, 80469 Munich",
   },
 ];
 
@@ -58,10 +58,16 @@ const skillData = [
     title: "skills",
     data: [
       {
-        name: "Angular, Typescript",
+        name: "TypeScript, JavaScript, Java, C#, Python, SQL",
       },
       {
-        name: "Java, Typescript",
+        name: "Angular, React, Spring, Node.js, Tailwind",
+      },
+      {
+        name: "Claude Code, AI-assisted testing, CI/CD, SonarQube",
+      },
+      {
+        name: "MongoDB, MySQL, PostgreSQL, Oracle",
       },
     ],
   },
@@ -69,10 +75,31 @@ const skillData = [
     title: "tools",
     data: [
       {
-        imgPath: "/about/figma.svg",
+        imgPath: "/about/claude.svg",
       },
       {
-        imgPath: "/about/notion.svg",
+        imgPath: "/about/nx.svg",
+      },
+      {
+        imgPath: "/about/jenkins.svg",
+      },
+      {
+        imgPath: "/about/intellij.svg",
+      },
+      {
+        imgPath: "/about/sonar.svg",
+      },
+      {
+        imgPath: "/about/docker.svg",
+      },
+      {
+        imgPath: "/about/gradle.svg",
+      },
+      {
+        imgPath: "/about/git.svg",
+      },
+      {
+        imgPath: "/about/vercel.svg",
       },
       {
         imgPath: "/about/vscode.svg",
@@ -87,8 +114,13 @@ const qualificationData: Array<QualificationData> = [
     data: [
       {
         university: "Hochschule Aalen",
-        qualification: "Bachelor of Science",
-        years: "2015 - 2018",
+        qualification: "B.Sc Computer Science",
+        years: "2016 - 2019",
+      },
+      {
+        university: "University Ulm",
+        qualification: "Computer Science",
+        years: "2014 - 2016",
       },
     ],
   },
@@ -96,9 +128,24 @@ const qualificationData: Array<QualificationData> = [
     title: "experience",
     data: [
       {
-        company: "Bachner",
-        role: "Software Consultant",
-        years: "2015 - 2018",
+        company: "Collaboration Factory GmbH",
+        role: "Team Lead Engineering",
+        years: "2026 - now",
+      },
+      {
+        company: "Collaboration Factory GmbH",
+        role: "Full Stack Engineer",
+        years: "2022 - 2026",
+      },
+      {
+        company: "Bachner Elektro GmbH & Co. KG",
+        role: "Software Developer / Consultant",
+        years: "2020 - 2022",
+      },
+      {
+        company: "BMW AG",
+        role: "Bachelor Student / IT-Specialist",
+        years: "2018 - 2019",
       },
     ],
   },
@@ -143,11 +190,13 @@ const About = () => {
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">Personal Info</h3>
                     <p className="subtitle max-w-xl max-auto xl:mx-0">
-                      I&apos;m a Full Stack Engineer based in Munich, Germany,
-                      with a passion for building robust web applications. With
-                      a background in Computer Science and hands-on experience
-                      in software consulting, I bring both technical depth and
-                      practical problem-solving to every project.
+                      High-impact Engineering Leader with over 5 years of
+                      experience building scalable software solutions. I
+                      specialize in bridging the gap between product vision and
+                      technical execution. Dedicated to fostering
+                      high-performance cultures where engineers grow both
+                      personally and professionally while delivering robust,
+                      innovative products.
                     </p>
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {
