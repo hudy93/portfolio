@@ -32,7 +32,7 @@ const ContactForm = () => {
     setStatus("loading");
     try {
       const formData = new FormData();
-      formData.append("access_key", "e53ab39a-9c57-45ef-8136-aa406fd4188f");
+      formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY!);
       formData.append("name", data.name);
       formData.append("email", data.email);
       formData.append("subject", data.subject);
