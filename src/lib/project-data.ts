@@ -9,6 +9,14 @@ export interface ProjectData {
 
 export const projectData: ProjectData[] = [
   {
+    image: "/work/5.png",
+    category: "next js",
+    name: "PerformanceHub",
+    desc: "An employee performance management dashboard for tracking and analyzing worker performance metrics with interactive data visualizations.",
+    link: "https://performance-hub-gilt.vercel.app",
+    github: "https://github.com/hudy93/performance-hub",
+  },
+  {
     image: "/work/1.png",
     category: "next js",
     name: "alittlehelp",
